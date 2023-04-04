@@ -12,13 +12,13 @@ steps:
   waitFor: ['build-myapp-image']  
   
  # deploy container image to GKE
-- name: "gcr.io/cloud-builders/gke-deploy"
-  args:
-  - run
-  - --filename=./myapp/
-  - --image=gcr.io/$PROJECT_ID/test-app:latest
-  - --location=us-central1-c
-  - --cluster=test-gke
+# - name: "gcr.io/cloud-builders/gke-deploy"
+#   args:
+#   - run
+#   - --filename=./myapp/
+#   - --image=gcr.io/$PROJECT_ID/test-app:latest
+#   - --location=us-central1-c
+#   - --cluster=test-gke
   
 images:
  - 'gcr.io/$PROJECT_ID/test-app:latest'
